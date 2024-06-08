@@ -1,0 +1,12 @@
+name: HTML Check
+on:
+  push:
+    branches: [main]
+jobs:
+  TestHTML:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Check HTML syntax
+        run: npx prettier *.html 
+    
